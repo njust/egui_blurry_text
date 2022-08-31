@@ -11,10 +11,13 @@ fn main() {
     );
 }
 
-struct DemoApp;
+struct DemoApp {
+    color: Color32,
+}
 impl Default for DemoApp {
     fn default() -> Self {
         Self {
+            color: Color32::RED,
         }
     }
 }
@@ -23,7 +26,8 @@ impl eframe::App for DemoApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
             egui::global_dark_light_mode_buttons(ui);
-            let _ = ui.button(RichText::new("⊗").color(Color32::RED));
+            ui.color_edit_button_srgba(&mut self.color);
+            let _ = ui.button(RichText::new("⊗").color(self.color));
             let _ = ui.button("⊗");
         });
     }
