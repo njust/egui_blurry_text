@@ -5,7 +5,7 @@ use eframe::{egui::{self, RichText, Color32}};
 fn main() {
     let options = eframe::NativeOptions::default();
     eframe::run_native(
-        "License Generator",
+        "Demo App",
         options,
         Box::new(|_cc| Box::new(DemoApp::default())),
     );

@@ -1,9 +1,9 @@
 [package]
-name = "egui_blurry_icons"
+name = "egui_blurry_text"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-eframe = { git="https://github.com/emilk/egui.git" }
+eframe = { git="https://github.com/emilk/egui.git"}
